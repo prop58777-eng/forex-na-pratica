@@ -9,7 +9,7 @@
 :root{--bg:#07100d;--p:#0d1814;--line:#1d332a;--text:#f2f7f4;--muted:#9aaea5;--g:#20d889;--red:#ff6b6b}*{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;
-background:radial-gradient(circle at 80% 0,#123326 0,transparent 30%),var(--bg);
+background:var(--bg);
 color:var(--text);
 font:16px/1.6 system-ui,-apple-system,Segoe UI,sans-serif}
 a{color:inherit;
@@ -21,7 +21,7 @@ top:0;
 z-index:9;
 background:#07100de8;
 border-bottom:1px solid var(--line);
-backdrop-filter:blur(12px)}
+backdrop-filter:none}
 header .wrap{width:100%;
 padding-left:8px;
 padding-right:4%}
@@ -44,7 +44,7 @@ object-fit:contain;
 animation:none;
 will-change:transform,filter}
 .brand:after{display:none}
-.brand:hover img{transform:scale(1.035)}
+.brand:hover img{transform:none}
 @media (prefers-reduced-motion:reduce){.brand img,.brand:after{display:none}}
 .brand span{color:var(--g)}
 nav div:last-child{display:flex;
