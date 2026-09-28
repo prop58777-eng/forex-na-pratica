@@ -224,7 +224,7 @@ margin-bottom:0">Fonte: Twelve Data • conexão protegida pelo servidor</p>
 </script>
 <script>
 document.getElementById("year").textContent=new Date().getFullYear();
-const cfg={"EUR/USD":["Euro / Dólar",4],"GBP/USD":["Libra / Dólar",4],"USD/JPY":["Dólar / Iene",2],"USD/BRL":["Dólar / Real",3]},prev={};
+const cfg={"EUR/USD":["Euro / Dólar",2],"GBP/USD":["Libra / Dólar",2],"USD/JPY":["Dólar / Iene",2],"USD/BRL":["Dólar / Real",2]},prev={};
 const root=document.getElementById("pairs");
 Object.entries(cfg).forEach(([s,[n]])=>root.insertAdjacentHTML("beforeend",'<div class="pair" data-s="'+s+'">
 <div>
