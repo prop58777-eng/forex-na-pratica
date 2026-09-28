@@ -48,5 +48,5 @@ io.on("connection",socket=>{
   socket.emit("market-status",API_KEY?{text:"● CARREGANDO COTAÇÕES...",color:"#9de8c5"}:{text:"● AGUARDANDO CONFIGURAÇÃO DA API",color:"#ffb36b"});
 });
 updateMarket();
-setInterval(updateMarket,60000);
+setInterval(updateMarket,300000);
 server.listen(PORT,()=>console.log("FOREX NA PRÁTICA rodando na porta "+PORT));
