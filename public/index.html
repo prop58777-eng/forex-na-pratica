@@ -226,14 +226,7 @@ margin-bottom:0">Fonte: Twelve Data • conexão protegida pelo servidor</p>
 document.getElementById("year").textContent=new Date().getFullYear();
 const cfg={"EUR/USD":["Euro / Dólar",2],"GBP/USD":["Libra / Dólar",2],"USD/JPY":["Dólar / Iene",2],"USD/BRL":["Dólar / Real",2]},prev={};
 const root=document.getElementById("pairs");
-Object.entries(cfg).forEach(([s,[n]])=>root.insertAdjacentHTML("beforeend",'<div class="pair" data-s="'+s+'">
-<div>
-<b>'+s+'</b>
-<small>'+n+'</small>
-</div>
-<span class="price">--</span>
-<span class="change">--</span>
-</div>'));
+Object.entries(cfg).forEach(([s,[n]])=>root.insertAdjacentHTML("beforeend",'<div class="pair" data-s="'+s+'"><div><b>'+s+'</b><small>'+n+'</small></div><span class="price">--</span><span class="change">--</span></div>'));
 const socket=io(),status=document.getElementById("status");
 socket.on("market-status",d=>{status.textContent=d.text;
 status.style.color=d.color||"#9de8c5"});
