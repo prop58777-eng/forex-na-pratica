@@ -115,7 +115,7 @@ margin:0 0 8px}
 grid-template-columns:repeat(3,1fr);
 gap:18px;
 margin-top:28px}
-.box h3{margin:8px 0}
+.box h3{margin:8px 0}.box.clickable{cursor:pointer;transition:transform .18s ease,border-color .18s ease}.box.clickable:hover{transform:translateY(-3px);border-color:#28503f}.box-detail{display:none;margin-top:14px;padding-top:14px;border-top:1px solid var(--line);color:var(--muted)}.box.clickable.open .box-detail{display:block}.box.clickable.open{border-color:#28503f}
 .tag{font-size:11px;
 color:#79d8ae;
 text-transform:uppercase;
@@ -223,6 +223,7 @@ margin-bottom:0">Fonte: Twelve Data • conexão protegida pelo servidor</p>
 </div>
 </footer>
 <script src="/socket.io/socket.io.js">
+document.querySelectorAll(".box.clickable").forEach(box=>box.addEventListener("click",()=>box.classList.toggle("open")));
 </script>
 <script>
 document.getElementById("year").textContent=new Date().getFullYear();
